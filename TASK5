@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marketing Campaign Analysis Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Marketing Campaign Analysis Dashboard</h1>
+        
+        <div class="chart-container">
+            <h2>Campaign Funnel</h2>
+            <div id="funnel_chart"></div>
+        </div>
+        
+        <div class="chart-container">
+            <h2>Reach vs Conversion Rate</h2>
+            <div id="scatter_chart"></div>
+        </div>
+    </div>
+    
+    <script>
+        var funnel_chart = {fig_funnel.to_json()};
+        Plotly.newPlot('funnel_chart', funnel_chart.data, funnel_chart.layout);
+        
+        var scatter_chart = {fig_scatter.to_json()};
+        Plotly.newPlot('scatter_chart', scatter_chart.data, scatter_chart.layout);
+    </script>
+</body>
+</html>
